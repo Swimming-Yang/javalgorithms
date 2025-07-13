@@ -1,4 +1,4 @@
-package 구현;
+package 수학;
 import java.io.*;
 
 public class BOJ_15894_수학은체육과목입니다 {
