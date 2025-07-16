@@ -1,0 +1,18 @@
+package samsung01;
+import java.io.*;
+
+public class BOJ_27433_팩토리얼2 {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int target_num = Integer.parseInt(br.readLine());
+
+		long result = 1;
+
+		for (int i = 2; i <= target_num; i++) {
+			result *= i;
+		}
+
+		System.out.println(result);
+	}
+}
