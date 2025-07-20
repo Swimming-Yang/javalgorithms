@@ -1,0 +1,40 @@
+package com.example;
+
+import java.io.*;
+
+public class BOJ_4948_베르트랑공준 {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		while (true) {
+			int target_num = Integer.parseInt(br.readLine());
+			if (target_num == 0) {
+				break;
+			}
+			int answer_count = 0;
+			
+			
+			for (int i = target_num + 1; i <= 2 * target_num; i ++) { // 소수 판별할 숫
+				if (isPrime(i)) {
+					answer_count += 1;
+				}
+
+			}
+			System.out.println(answer_count);
+		}
+	}
+	//소수 판별 알고리즘
+	public static boolean isPrime(int num) {
+		if (num < 2) return false;
+		if (num == 2) return true;
+		
+		for (int i = 2; i * i <= num; i++) {
+			if (num % i == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+}
