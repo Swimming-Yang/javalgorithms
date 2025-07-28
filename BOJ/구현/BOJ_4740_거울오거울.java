@@ -1,7 +1,6 @@
-package samsung01;
+package 구현;
 
 import java.io.*;
-import java.lang.*;
 public class BOJ_4740_거울오거울 {
 
 	public static void main(String[] args) throws IOException{

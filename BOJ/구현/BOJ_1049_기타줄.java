@@ -1,8 +1,7 @@
-package samsung01;
+package 구현;
 import java.io.*;
 
 
-import java.io.*;
 import java.util.*;
 
 public class BOJ_1049_기타줄 {
