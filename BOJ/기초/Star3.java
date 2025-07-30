@@ -1,5 +1,6 @@
+package 기초;
 
-public class Main {
+public class Star3 {
     public static void main(String[] args) {
         for(int i = 0; i < 6; i++) {
             for(int j = 5; j > i; j--) {
