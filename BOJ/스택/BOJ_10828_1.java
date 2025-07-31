@@ -4,47 +4,54 @@ import java.io.*;
 import java.util.*;
 
 public class BOJ_10828_1 {
-    public static void main(String[] args) throws IOException{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Stack<Integer> num_stack = new Stack<>();
+    public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    Stack<Integer> stackInt = new Stack<>();
+    //입력 구현부
         int testcase_num = Integer.parseInt(br.readLine());
+        for(int i = 0; i < testcase_num; i ++) {
+            String[] num = br.readLine().split(" ");
 
-        for(int i = 0; i < testcase_num; i++) {
-            String [] input_nums = br.readLine().split(" ");
-            String order_a = input_nums[0];
-
-
-
-
-
-            if (order_a.equals("push") ) {
-                int number = Integer.parseInt(input_nums[1]);
-                num_stack.push(number);
-            } else if (order_a.equals("pop")) {
-                if (num_stack.isEmpty()) {
+            //1. Push의 경우
+            if (num[0].equals("push")) {
+                int push_num = Integer.parseInt(num[1]);
+                stackInt.push(push_num);
+            } else if (num[0].equals("pop")) {
+                //2. pop의 경우
+                if (stackInt.isEmpty()) {
                     System.out.println("-1");
-                }
-                System.out.println(num_stack.peek());
-                num_stack.pop();
-            } else if (order_a.equals("size")) {
-                num_stack.size();
-            } else if (order_a.equals("empty")) {
-                if (num_stack.isEmpty()) {
-                    System.out.println(-1);
                 } else {
-                    System.out.println(0);
+                    System.out.println(stackInt.peek());
+                    stackInt.pop();
                 }
-            } else if (order_a.equals("top")) {
-                if (num_stack.isEmpty()) {
-                    System.out.println(-1);
+            } else if (num[0].equals("size")) {
+                //3. size의 경우
+                System.out.println(stackInt.size());
+            } else if (num[0].equals("empty")) {
+                //4. empty의 경우
+                if (stackInt.isEmpty()) {
+                    //4 - 1 배열이 비어있는 경우
+                    System.out.println("1");
                 } else {
-                    System.out.println(num_stack.peek());
+                    //4 - 2 배열이 비어있지 않은 경우
+                    System.out.println("0");
+                }
+            } else if (num[0].equals("top")) {
+                //5. top의 경우
+                if (stackInt.isEmpty()) {
+                    //비어 있는경우
+                    System.out.println("-1");
+                } else {
+                    System.out.println(stackInt.peek());
                 }
             }
+        }
 
-                
-            }
-     }
+
+
+
+
+    }
 }
 
 
