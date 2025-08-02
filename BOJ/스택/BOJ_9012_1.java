@@ -11,7 +11,7 @@ public class BOJ_9012_1 {
         for(int i = 0; i < testcase_num; i++) {
             Stack<Character> str_stack = new Stack<>();
             String word = br.readLine();
-            boolean isValid = true;  // 유효성 체크 변수
+            boolean isValid = true;
             
             for(int j = 0; j < word.length(); j++) {
                 char cur_word = word.charAt(j);  // Character 대신 char 사용
