@@ -15,13 +15,11 @@ public class DFS {
 
         System.out.print(nodeIndex + " -> ");
 
-        for (int node : graph[nodeIndex]) {
-            if(!visited[node]) {
+        for (int node : graph[nodeIndex]) {  
+            if(visited[node] == false) {
                 dfs(node);
             }
+
         }
     }
-
-    
-
 }
